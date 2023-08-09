@@ -7,13 +7,30 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  /* background-image: url("./assets/fond.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+.App{
+}
+.navbar {
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  width: 100%;
+  height: 50px;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,6 +41,7 @@ a:hover {
 }
 
 body {
+  width: 100%;
   margin: 0;
   display: flex;
   place-items: center;

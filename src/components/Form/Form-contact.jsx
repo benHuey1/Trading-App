@@ -8,6 +8,7 @@ export default function FormContact() {
 
     return (
         <>
+        <form className="form" action="" method="post">
             <label htmlFor="">
                 Name: 
                 <input type="text" value={name} id="" onChange={e => setName(e.target.value)} />
@@ -30,6 +31,7 @@ export default function FormContact() {
             {message !== '' &&
                 <p>Your message is {message}.</p>
             }
+        </form>
         </>
     )
 }

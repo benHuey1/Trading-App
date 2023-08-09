@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../Buttons/Buttons";
+import "./form.css"
 
 export default function Form() {
     const [name, setName] = useState('');
@@ -8,17 +9,18 @@ export default function Form() {
 
     return (
         <>
+        <form className="form" action="" method="post">
             <label htmlFor="">
                 Name: 
                 <input type="text" value={name} id="" onChange={e => setName(e.target.value)} />
             </label>
             <label htmlFor="">
                 Password: 
-                <input type="text" value={password} id="" onChange={e => setPassword(e.target.value)} />
+                <input type="password" value={password} id="" onChange={e => setPassword(e.target.value)} />
             </label>
             <label htmlFor="">
                 Confirm your password: 
-                <input type="text" value={verifPassword} id="" onChange={e => setVerifPassword(e.target.value)} />
+                <input type="password" value={verifPassword} id="" onChange={e => setVerifPassword(e.target.value)} />
             </label>
             <Button content="ok"/>
             {name !== '' &&
@@ -30,6 +32,7 @@ export default function Form() {
             {verifPassword !== '' &&
                 <p>Your verificate Password is {verifPassword}.</p>
             }
+        </form>
         </>
     )
 }
